@@ -104,11 +104,12 @@ def sol(n, formula):
             opidxs.append(i)
         if ch.isnumeric():
             formula[i] = int(ch)
-    print(formula, opidxs)
     for i in range(len(formula)//4+2):
         idxs = pickOps(opidxs, i)
         for idxset in idxs:
             cands.append(eval_(formula, idxset))
+    if not cands:
+        return formula[0]
     return max(cands)
 args = [] 
 while True:
