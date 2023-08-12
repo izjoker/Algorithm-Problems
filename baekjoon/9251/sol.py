@@ -18,23 +18,19 @@ def sol(arg1, arg2):
     str1, str2 = [arg1, arg2]
     if len(arg1) > len(arg2):
         str1, str2 = [arg2, arg1] 
-    dp = [[0, -float('inf')]] * (len(str1))
+    str1, str2 = [" "+str1, " "+str2]
+    dp = [[0 for _ in range(len(str2))] for _ in range(len(str1))]
 
-    for i in range(len(str1)):
-        cands = []
-        for j in range(len(str2)):
+    for i in range(1, len(str1)):
+        for j in range(1, len(str2)):
             if str1[i] == str2[j]:
-                for k in range(i):
-                    if dp[k][1] < j:
-                        cands.append([dp[k][0]+1, j])
-                if cands:
-                    dp[i] = max(cands)
-                else:
-                    dp[i] = [1, j]
-                break    
-            
-    print(dp)
-    return max(dp)[0]
+                dp[i][j] = dp[i-1][j-1]+1 
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+    
+    return max(dp[-1])
+
+
 
 args = []
 while True:
