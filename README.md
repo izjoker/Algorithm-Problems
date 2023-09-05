@@ -2,4 +2,4 @@
 Repo to store Algorithm problems and Solutions
 
 # References
-/baekjoon: https://www.acmicpc.net/problemset
+baekjoon: https://www.acmicpc.net/problemset
