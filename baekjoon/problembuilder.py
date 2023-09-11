@@ -30,7 +30,7 @@ def buildprob():
     with open(f'./{probnum}/stdout', 'w', encoding="utf-8") as f:
         f.write(stdout)
     with open(f'./{probnum}/sol.py', 'w', encoding="utf-8") as f:
-        f.write("from sys import stdin\ndef sol():\n\treturn\nn = int(stdin.readline().strip())\n")
+        f.write("from sys import stdin\ndef sol():\nreturn\nn = int(stdin.readline().strip())\n")
     
 
 
