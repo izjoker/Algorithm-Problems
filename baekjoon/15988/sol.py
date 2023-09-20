@@ -4,6 +4,12 @@ def sol(n):
     dp1 = 1
     dp2 = 2
     dp3 = 4
+    if n == 1:
+        return dp1
+    if n == 2:
+        return dp2
+    if n == 3:
+        return dp3
     for i in range(4, n+1):
         dp4 = (dp1+dp2+dp3) % DIV
         dp1=dp2 
