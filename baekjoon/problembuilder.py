@@ -61,19 +61,3 @@ def getproblem(url):
     
 
 buildprob()
-
-# soup = bs(res.text, 'html.parser')
-# print(soup.find_all(class_="container content"))
-
-# https://www.acmicpc.net/problem/9252
-# <pre class="sampledata" id="sample-input-1">ACAYKP
-# CAPCAK
-# </pre>
-
-# 자, 이제 find_elements_by_css_selector( ) 함수로 chromedriver가 검색창을 찾을 수 있게 해봅시다.
-
-# # 검색어 창을 찾아 search 변수에 저장 (css_selector 이용방식)
-# search_box = driver.find_element_by_css_selector('input.gLFyf.gsfi')
-
-# # 검색어 창을 찾아 search 변수에 저장 (xpath 이용방식)
-# search_box = driver.find_element_by_xpath('//*[@id="google_search"]')
