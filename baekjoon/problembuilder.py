@@ -42,7 +42,7 @@ def getproblem(url):
     options.headless = True
     driver = webdriver.Chrome(options=options)
     
-    driver.set_page_load_timeout(5)
+    driver.set_page_load_timeout(60)
     try :
         driver.get(url)
         print("URL successfully Accessed")

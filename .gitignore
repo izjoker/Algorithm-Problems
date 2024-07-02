@@ -1,8 +1,9 @@
 stdin**
 stdout**
 ans**
-/.lh
+baekjoon/.lh
 *.json
 temp
 tmp
 refactoring**
+baekjoon/path
